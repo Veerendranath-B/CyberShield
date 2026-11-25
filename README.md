@@ -16,6 +16,33 @@ The project will demonstrate Create, Read, Update, and Delete (CRUD) functionali
 - **Authentication:** Django Authentication
 - **Version Control:** Git and GitHub
 
+## Planned Architecture
+
+CyberShield will follow a layered architecture:
+
+- Presentation Layer: HTML, CSS and Bootstrap for the user interface.
+- Application Layer: Django for business logic, authentication,
+  authorization, input validation and session management.
+- Database Layer: SQLite for storing user and incident information.
+
+Security checks will be enforced on the server side. Employees will only be permitted to access their own incident reports while administrators will have additional management privileges.
+
+The application will follow principles of least privilege, separation of concerns and secure development.
+
+## Development Methodology
+
+CyberShield will follow an iterative development approach.
+
+Development will be divided into small stages:
+1. Project setup and database design.
+2. User authentication and role management.
+3. Implementation of CRUD functionality.
+4. Security controls and access restrictions.
+5. Functional and security testing.
+6. Documentation and final demonstration.
+
+Security will be considered throughout development, rather than being introduced only during testing.
+
 ## Features and Development Progress
 
 - [x] Define the initial project scope
@@ -56,11 +83,23 @@ The project is in the initial planning and repository setup stage. Application d
 
 Installation requirements, configuration steps, and instructions for running the application locally will be documented during implementation.
 
-## Testing
+## Testing Strategy
 
-Functional testing will cover the application's CRUD operations. Security testing will assess authentication, access controls, and input handling.
+The application will undergo functional and security testing.
 
-Test procedures, results, and identified issues will be documented as testing is performed.
+### Functional Testing
+- Verify Create, Read, Update and Delete operations.
+- Verify employee and administrator functionality.
+- Verify database operations.
+
+### Security Testing
+- Authentication and session security testing.
+- Role-based authorization and ownership testing.
+- Input validation and injection protection testing.
+- Static Application Security Testing (SAST) using Bandit.
+- Basic security assessment using OWASP ZAP, if feasible.
+
+Test results, screenshots, identified issues and security improvements will be documented.
 
 ## Development Log
 
